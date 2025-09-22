@@ -63,13 +63,29 @@
                 </div>
                 <div class="mobile-navigation-bar">
                     <div class="nav-bar-logo">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars" id="mobileToggle"></i>
                     </div>
                     <div class="header-logo">
                         <!-- <img src="./assets/img/mobileX-logo.png" alt=""> -->
                         <span class="header-logo-text">AURA</span>
                     </div>
+                    <div class="mobile-menu" id="mobileMenu">
+                        <div>
+                            <button class="close-btn" id="closeMenu">&times;</button>
+                        </div>
+                        <!-- <div class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div> -->
+                        <ul class="nav-bar-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="product.html">Product</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="testimoniual.html">Testimonial</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
         </div>
     </header>
@@ -293,6 +309,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        // Open mobile menu
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('show');
+        });
+
+        // Close mobile menu
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('show');
+        });
+    </script>
 
 </body>
 
