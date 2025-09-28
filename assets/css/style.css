@@ -171,6 +171,7 @@ header .mobile-navigation-bar {
     display: none;
 }
 
+/* Mobile Menu Container */
 .mobile-menu {
     display: none;
     position: fixed;
@@ -180,12 +181,17 @@ header .mobile-navigation-bar {
     height: 100%;
     background-color: rgba(255, 255, 255, 0.95);
     z-index: 1000;
+    padding-top: 60px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
+/* Show menu when active */
 .mobile-menu.show {
     display: block;
 }
 
+/* Close button */
 .close-btn {
     position: absolute;
     top: 20px;
@@ -196,8 +202,32 @@ header .mobile-navigation-bar {
     cursor: pointer;
 }
 
-.mobile-menu .nav{
+/* Nav Links */
+.mobile-menu .nav-bar-links {
     list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+
+.mobile-menu .nav-bar-links li {
+    margin: 20px 0;
+}
+
+.mobile-menu .nav-bar-links li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.mobile-menu .nav-bar-links li a:hover {
+    color: #485ad7;
+}
+
+/* Search Icon */
+.mobile-menu .search {
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 
 @media(max-width:1199px) {
