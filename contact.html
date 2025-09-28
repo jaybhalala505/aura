@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MobileX</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/functionality.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -25,7 +24,7 @@
         <button onclick="closeAlert()">OK</button>
     </div>
 
-     <header>
+    <header>
         <div class="header-top">
             <div class="container">
                 <div class="inner-header">
@@ -69,11 +68,26 @@
                 </div>
                 <div class="mobile-navigation-bar">
                     <div class="nav-bar-logo">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars" id="mobileToggle"></i>
                     </div>
                     <div class="header-logo">
                         <!-- <img src="./assets/img/mobileX-logo.png" alt=""> -->
                         <span class="header-logo-text">AURA</span>
+                    </div>
+                    <div class="mobile-menu" id="mobileMenu">
+                        <div>
+                            <button class="close-btn" id="closeMenu">&times;</button>
+                        </div>
+                        <!-- <div class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div> -->
+                        <ul class="nav-bar-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="product.html">Product</a></li>
+                            <li><a href="service.html">Service</a></li>
+                            <li><a href="testimoniual.html">Testimonial</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -105,21 +119,25 @@
 
                     <!-- Right Side - Contact Form -->
                     <div class="contact-form">
-                        <form>
+                        <form onsubmit="contactForm(event)">
                             <div class="form-group">
-                                <input type="text" placeholder="Your Name" required>
+                                <input type="text" placeholder="Your Name" id="name">
+                                <span id="name-error"></span>
                             </div>
                             <div class="form-group">
-                                <input type="email" placeholder="Your Email" required>
+                                <input type="email" placeholder="Your Email" id="email">
+                                <span id="email-error"></span>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Subject">
+                                <input type="text" placeholder="Subject" id="subject">
+                                <span id="subject-error"></span>
                             </div>
                             <div class="form-group">
                                 <textarea rows="5" placeholder="Your Message"></textarea>
                             </div>
-                            <button type="submit" class="contact-btn" onclick="customAlert()">Send Message</button>
+                            <button type="submit" class="contact-btn">Send Message</button>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -218,6 +236,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="./assets/js/functionality.js"></script>
 </body>
 
 </html>
